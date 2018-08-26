@@ -1,0 +1,98 @@
+<script type="text/javascript">
+	window.open(URL, name, option ) (popup 경로 url , name 필드 , popup 옵션)
+
+
+
+$('.registerBtn').click(function(event){  //버튼을 클릭 했을시 popupOpen 함수 출력 
+        console.log('click');
+        popupOpen();	//Popup Open 함수
+    });
+  
+	function popupOpen(){
+		var url= "/host/new";    //팝업창 페이지 URL
+		var winWidth = 700;
+	    var winHeight = 600;
+	    var popupOption= "width="+winWidth+", height="+winHeight;    //팝업창 옵션(optoin)
+		window.open(url,"",popupOption);
+	}
+
+</script>
+
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span ><img src="<%=asset_path 'logo.jpg'%>" alt="" /></span><span class="title"></span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+						   <% if @current_user == nil %>
+							<li><a href="/login">로그인</a></li>
+							<li><a href="/sessions/join">회원가입</a></li>
+							<%else%>
+							<%=@current_user.name %>님 환영합니다.<br>
+							<li><a href="/info">예약 현황</a></li>
+							<li><a href="/logout">로그아웃</a></li>
+							<% end %>
+							
+
+		<div class="container">
+      <div class="row">
+        <div class="page-header">
+        </div>
+        <div class="col-md-3">
+          
+            <!--<div class="form-group">
+                <a href="" class="btn btn-default btn-block m-t-md"> 회원가입</a>
+            </div>-->
+        </form>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+<!--							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>-->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>혼자서 모든것을 짊어지려고 하지 마세요.<br />
+								당신은 충분히 많은 것을 하고 있습니다.</h1>
+								<h2>업무를 돕기위해 제가 돌아왔습니다.</h2>
+								<h2>예약은 저에게 맡겨주세요!</h2>
+							</header>
+
+						</div>
+					</div>
+			</div>
+

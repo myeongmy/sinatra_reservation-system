@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+  <head>
+		<title>Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<%= stylesheet_link_tag 'application',media:'all' %>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	  
+	</head>
+	
+	<body>
+    <%=yield%>
+		<%= javascript_include_tag 'application'%>
+
+	<!-- Scripts -->
+			<script src="assets/javascripts/jquery.min.js"></script>
+			<script src="assets/javascripts/browser.min.js"></script>
+			<script src="assets/javascripts/breakpoints.min.js"></script>
+			<script src="assets/javascripts/util.js"></script>
+			<script src="assets/javascripts/main.js"></script>
+	</body>

@@ -1,0 +1,33 @@
+<h1><center>This is info page</center></h1>
+<style>
+table{
+    width : 600px;
+    height: 400px;
+    text-align : center;
+    margin: auto;
+    
+}
+    
+</style>
+
+<table class="table" WIDTH="100" HEIGHT="80" >
+		<thead>
+			<tr class="form-group">
+				<th style="font-weight:bold; background-color:lightyellow">예약자</th>
+				<th style="font-weight:bold; background-color:lightyellow">예약 날짜</th>
+				<th style="font-weight:bold; background-color:lightyellow">예약 시간</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		
+            <% @reservations.each do |p| %> 
+				<tr class="form-group">
+					<td><%= p.name %></td>
+					<td><%= p.day %></td>
+					<td><%= p.time %></td>
+				</tr>
+            <%end%>
+		</tbody>
+	</table>
+
